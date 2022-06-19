@@ -5,7 +5,7 @@ const app = express();
 const cors = require("cors");
 app.use(cors({ optionSuccessStatus: 200 })); // some legacy browsers choke on 204
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 // index
 app.get("/", function (req, res) {
